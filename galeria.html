@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria | Anderson Albuquerque | Serviços e Montagens</title>
+    <meta name="description"
+        content="Galeria de trabalhos de montagem de móveis, incluindo guarda-roupas, armários, cozinhas e mais.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos adicionais para a página da galeria */
+        .gallery-page {
+            padding-top: 120px; /* Espaço para o header fixo */
+            padding-bottom: 60px;
+        }
+        .gallery-section {
+            margin-bottom: 60px;
+            text-align: center; /* Centraliza o subtítulo */
+        }
+        .gallery-section .section-subtitle {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e8b917;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        /* Ajusta a grade para ter 6 colunas em telas grandes */
+        .gallery-grid {
+            grid-template-columns: repeat(6, 1fr);
+            text-align: left; /* Alinha o conteúdo dos itens à esquerda */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <a href="index.html#home">
+                    <img src="logo-svg.svg" alt="AA Montagens Logo" class="site-logo">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html#home">Início</a></li>
+                    <li><a href="index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#galeria">Galeria</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li><a href="gerador.html">Administração</a></li>
+                </ul>
+            </nav>
+            <div class="cta-nav">
+                <a href="index.html#contato" class="btn btn-primary">Orçamento Rápido</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo da Galeria -->
+    <main class="gallery-page">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Nossos Trabalhos</h2>
+                <p>Confira a qualidade do nosso serviço na prática.</p>
+            </div>
+
+            <!-- Seção Guarda Roupas -->
+            <section class="gallery-section">
+                <h3 class="section-subtitle">Guarda Roupas</h3>
+                <div class="gallery-grid">
+                    <script>
+                        (function() {
+                            const grid = document.currentScript.parentElement;
+                            for (let i = 1; i <= 22; i++) {
+                                const item = document.createElement('div');
+                                item.className = 'gallery-item';
+                                item.innerHTML = `<img src="galeria/guarda-roupas/foto${i}.jpg" alt="Guarda Roupa ${i}" loading="lazy"><div class="overlay"><span>Guarda Roupa ${i}</span></div>`;
+                                grid.appendChild(item);
+                            }
+                        })();
+                    </script>
+                </div>
+            </section>
+
+            <!-- Seção Armários -->
+            <section class="gallery-section">
+                <h3 class="section-subtitle">Armários</h3>
+                <div class="gallery-grid">
+                    <script>
+                        (function() {
+                            const grid = document.currentScript.parentElement;
+                            for (let i = 1; i <= 4; i++) {
+                                const item = document.createElement('div');
+                                item.className = 'gallery-item';
+                                item.innerHTML = `<img src="galeria/armarios/foto${i}.jpg" alt="Armário ${i}" loading="lazy"><div class="overlay"><span>Armário ${i}</span></div>`;
+                                grid.appendChild(item);
+                            }
+                        })();
+                    </script>
+                </div>
+            </section>
+
+            <!-- Seção Outros -->
+            <section class="gallery-section">
+                <h3 class="section-subtitle">Outros</h3>
+                <div class="gallery-grid">
+                    <script>
+                        (function() {
+                            const grid = document.currentScript.parentElement;
+                            for (let i = 1; i <= 103; i++) {
+                                const item = document.createElement('div');
+                                item.className = 'gallery-item';
+                                item.innerHTML = `<img src="galeria/outros/foto${i}.jpg" alt="Outro ${i}" loading="lazy"><div class="overlay"><span>Outro ${i}</span></div>`;
+                                grid.appendChild(item);
+                            }
+                        })();
+                    </script>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html#home" class="logo" style="display: inline-block; max-width: 200px;">
+                    <img src="logo-amarela.png" alt="AA Montagens Logo" class="footer-logo">
+                </a>
+                <p>Garantia de qualidade e segurança na montagem dos seus móveis.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://instagram.com/aas.montagens" target="_blank" class="social-icon"
+                    title="@AAS.MONTAGENS"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Anderson Albuquerque. Todos os direitos reservados. | Site criado para
+                GitHub Pages</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5581997735936" target="_blank" class="float-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <a class="lightbox-prev">&#10094;</a>
+        <a class="lightbox-next">&#10095;</a>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
